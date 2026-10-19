@@ -356,37 +356,33 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
   box-shadow: 0 4px 12px rgba(232,200,122,0.2);
 }
 
-/* ── Stack map ── */
-.stack-map {
-  margin-top: 32px;
-  padding: 24px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: var(--bg-elevated);
+/* ── Clickable skill tags ── */
+.skill-tag { cursor: pointer; user-select: none; }
+.skill-tag.active-tag {
+  transform: translateY(-2px) scale(1.08);
+  box-shadow: 0 4px 16px rgba(52,211,153,0.35);
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
 }
-.stack-map svg {
-  width: 100%;
-  height: auto;
+.skill-tag.warm.active-tag {
+  box-shadow: 0 4px 16px rgba(232,200,122,0.35);
+  outline-color: var(--warm);
 }
-.stack-map-title {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--fg-muted);
-  margin-bottom: 16px;
+.stack-hint {
+  margin-top: 16px;
   text-align: center;
+  font-size: 12px;
+  color: var(--fg-muted);
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 0.04em;
+  transition: opacity 0.3s;
 }
-.stack-node { cursor: pointer; transition: opacity 0.3s; }
-.stack-node rect, .stack-node circle { transition: filter 0.3s, stroke-width 0.3s; }
-.stack-node.active rect, .stack-node.active circle { filter: drop-shadow(0 0 8px var(--accent)); stroke-width: 3; }
-.stack-node.dimmed { opacity: 0.3; }
-.stack-hub circle { transition: transform 0.3s; transform-origin: 350px 170px; }
-.stack-hub.active circle { transform: scale(1.1); }
-@media (max-width: 600px) {
-  .stack-map { padding: 12px; }
-  .stack-map svg { min-height: 280px; }
-}
+.timeline-item.highlight { border-left: 2px solid var(--accent); padding-left: 22px; }
+.timeline-item.dimmed-item { opacity: 0.25; }
+.project-showcase.highlight { border-color: var(--accent); box-shadow: 0 0 12px rgba(52,211,153,0.15); }
+.project-showcase.dimmed-item { opacity: 0.25; }
+.project-card.highlight { border-color: var(--accent); box-shadow: 0 0 12px rgba(52,211,153,0.15); }
+.project-card.dimmed-item { opacity: 0.25; }
 
 /* ── Timeline ── */
 .timeline { position: relative; padding-left: 24px; }
@@ -867,65 +863,7 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
       </div>
     </div>
 
-    <div class="stack-map reveal">
-      <div class="stack-map-title">Как это связано</div>
-      <svg viewBox="0 0 700 340" xmlns="http://www.w3.org/2000/svg" id="stack-svg">
-        <!-- connection lines -->
-        <g class="stack-lines" stroke="var(--border)" stroke-width="1.5" fill="none" opacity="0.4">
-          <line x1="175" y1="60" x2="525" y2="60"/>
-          <line x1="175" y1="60" x2="175" y2="170"/>
-          <line x1="525" y1="60" x2="525" y2="170"/>
-          <line x1="175" y1="170" x2="525" y2="170"/>
-          <line x1="175" y1="170" x2="175" y2="280"/>
-          <line x1="525" y1="170" x2="525" y2="280"/>
-          <line x1="350" y1="60" x2="350" y2="170"/>
-          <line x1="350" y1="170" x2="175" y2="280"/>
-          <line x1="350" y1="170" x2="525" y2="280"/>
-        </g>
-        <!-- Infra & DevOps node -->
-        <g class="stack-node" data-group="infra" tabindex="0">
-          <rect x="70" y="30" width="210" height="60" rx="8" fill="var(--bg-elevated)" stroke="var(--accent)" stroke-width="2"/>
-          <text x="175" y="55" text-anchor="middle" fill="var(--accent)" font-family="'IBM Plex Mono',monospace" font-size="11" font-weight="600" letter-spacing="0.08em">INFRA &amp; DEVOPS</text>
-          <text x="175" y="75" text-anchor="middle" fill="var(--fg-muted)" font-family="'Inter',sans-serif" font-size="10">Linux · Docker · Nginx · Git · CI/CD</text>
-        </g>
-        <!-- Monitoring node -->
-        <g class="stack-node" data-group="monitoring" tabindex="0">
-          <rect x="420" y="30" width="210" height="60" rx="8" fill="var(--bg-elevated)" stroke="var(--accent)" stroke-width="2"/>
-          <text x="525" y="55" text-anchor="middle" fill="var(--accent)" font-family="'IBM Plex Mono',monospace" font-size="11" font-weight="600" letter-spacing="0.08em">MONITORING</text>
-          <text x="525" y="75" text-anchor="middle" fill="var(--fg-muted)" font-family="'Inter',sans-serif" font-size="10">Grafana · Prometheus · Loki · Beszel</text>
-        </g>
-        <!-- Security node -->
-        <g class="stack-node" data-group="security" tabindex="0">
-          <rect x="70" y="140" width="210" height="60" rx="8" fill="var(--bg-elevated)" stroke="var(--warm)" stroke-width="2"/>
-          <text x="175" y="165" text-anchor="middle" fill="var(--warm)" font-family="'IBM Plex Mono',monospace" font-size="11" font-weight="600" letter-spacing="0.08em">SECURITY</text>
-          <text x="175" y="185" text-anchor="middle" fill="var(--fg-muted)" font-family="'Inter',sans-serif" font-size="10">iptables · UFW · fail2ban · VPN · SSH</text>
-        </g>
-        <!-- Scripting node -->
-        <g class="stack-node" data-group="scripting" tabindex="0">
-          <rect x="420" y="140" width="210" height="60" rx="8" fill="var(--bg-elevated)" stroke="var(--warm)" stroke-width="2"/>
-          <text x="525" y="165" text-anchor="middle" fill="var(--warm)" font-family="'IBM Plex Mono',monospace" font-size="11" font-weight="600" letter-spacing="0.08em">SCRIPTING</text>
-          <text x="525" y="185" text-anchor="middle" fill="var(--fg-muted)" font-family="'Inter',sans-serif" font-size="10">Bash · Python · PowerShell · C#</text>
-        </g>
-        <!-- GameDev node -->
-        <g class="stack-node" data-group="gamedev" tabindex="0">
-          <rect x="70" y="250" width="210" height="60" rx="8" fill="var(--bg-elevated)" stroke="var(--fg-muted)" stroke-width="1.5"/>
-          <text x="175" y="275" text-anchor="middle" fill="var(--fg-muted)" font-family="'IBM Plex Mono',monospace" font-size="11" font-weight="600" letter-spacing="0.08em">GAMEDEV</text>
-          <text x="175" y="295" text-anchor="middle" fill="var(--fg-muted)" font-family="'Inter',sans-serif" font-size="10">Unity · HDRP · C#</text>
-        </g>
-        <!-- Automotive node -->
-        <g class="stack-node" data-group="auto" tabindex="0">
-          <rect x="420" y="250" width="210" height="60" rx="8" fill="var(--bg-elevated)" stroke="var(--fg-muted)" stroke-width="1.5"/>
-          <text x="525" y="275" text-anchor="middle" fill="var(--fg-muted)" font-family="'IBM Plex Mono',monospace" font-size="11" font-weight="600" letter-spacing="0.08em">AUTOMOTIVE</text>
-          <text x="525" y="295" text-anchor="middle" fill="var(--fg-muted)" font-family="'Inter',sans-serif" font-size="10">ADB · Android · TCAM · OBD2</text>
-        </g>
-        <!-- Central orchestration hub -->
-        <g class="stack-node stack-hub" data-group="hub" tabindex="0">
-          <circle cx="350" cy="170" r="32" fill="var(--accent-dim)" stroke="var(--accent)" stroke-width="2"/>
-          <text x="350" y="166" text-anchor="middle" fill="var(--accent)" font-family="'IBM Plex Mono',monospace" font-size="9" font-weight="700">DOCKER</text>
-          <text x="350" y="180" text-anchor="middle" fill="var(--accent)" font-family="'IBM Plex Mono',monospace" font-size="8">COMPOSE</text>
-        </g>
-      </svg>
-    </div>
+    <div class="stack-hint reveal" id="stackHint"></div>
   </section>
 
   <!-- 03 Experience -->
@@ -936,7 +874,7 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
       <span class="section-line"></span>
     </div>
     <div class="timeline">
-      <div class="timeline-item reveal">
+      <div class="timeline-item reveal" data-tags="linux,docker,docker compose,systemd,nginx,git,ci/cd,grafana,prometheus,loki,alloy,alertmanager,beszel,fail2ban,iptables,ufw,ssh hardening,bash,python,tcam">
         <div class="timeline-dot"></div>
         <div class="timeline-date">2026 — настоящее время</div>
         <div class="timeline-role">DevOps Engineer</div>
@@ -952,7 +890,7 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
           </ul>
         </div>
       </div>
-      <div class="timeline-item reveal">
+      <div class="timeline-item reveal" data-tags="adb,android,ssh tunneling,bash,python">
         <div class="timeline-dot"></div>
         <div class="timeline-date">2026 — настоящее время</div>
         <div class="timeline-role">Системный инженер</div>
@@ -1004,7 +942,7 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
       <span class="section-line"></span>
     </div>
     <div class="projects-grid">
-    <a class="project-showcase reveal" href="https://github.com/Georgiy-DevOps/Panel" target="_blank" rel="noopener">
+    <a class="project-showcase reveal" href="https://github.com/Georgiy-DevOps/Panel" target="_blank" rel="noopener" data-tags="python,docker,ci/cd">
       <div class="showcase-header">
         <div>
           <div class="project-name">ByteDepp Control Panel</div>
@@ -1032,7 +970,7 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
         </div>
       </div>
     </a>
-    <div class="project-showcase reveal" style="margin-bottom:16px">
+    <div class="project-showcase reveal" style="margin-bottom:16px" data-tags="beszel,grafana,prometheus,loki,alloy,alertmanager,docker">
       <div class="showcase-header">
         <div>
           <div class="project-name">Server Monitoring Stack</div>
@@ -1056,7 +994,7 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
         </div>
       </div>
     </div>
-      <a class="project-card reveal reveal-delay-1" href="https://github.com/Georgiy-DevOps/aegis-arena" target="_blank" rel="noopener">
+      <a class="project-card reveal reveal-delay-1" href="https://github.com/Georgiy-DevOps/aegis-arena" target="_blank" rel="noopener" data-tags="python,docker">
         <div class="project-name">Aegis Arena</div>
         <div class="project-type">GameDevSecOps / Backend</div>
         <div class="project-desc">
@@ -1070,7 +1008,7 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
           <span class="project-tech-tag">Pytest</span>
         </div>
       </a>
-      <div class="project-card reveal reveal-delay-2">
+      <div class="project-card reveal reveal-delay-2" data-tags="c#,unity,hdrp">
         <div class="project-name">Depth-7: Evacuation</div>
         <div class="project-type">Дипломный проект / Unity HDRP</div>
         <div class="project-desc">
@@ -1084,7 +1022,7 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
           <span class="project-tech-tag">Input System</span>
         </div>
       </div>
-      <div class="project-card reveal reveal-delay-3">
+      <div class="project-card reveal reveal-delay-3" data-tags="adb,android,bash,tcam">
         <div class="project-name">TCAM SIM Patch Tool</div>
         <div class="project-type">Open Source</div>
         <div class="project-desc">
@@ -1097,7 +1035,7 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
           <span class="project-tech-tag">Bash</span>
         </div>
       </div>
-      <a class="project-card reveal reveal-delay-4" href="https://github.com/Georgiy-DevOps/planner-bot" target="_blank" rel="noopener">
+      <a class="project-card reveal reveal-delay-4" href="https://github.com/Georgiy-DevOps/planner-bot" target="_blank" rel="noopener" data-tags="python">
         <div class="project-name">Planner Bot</div>
         <div class="project-type">Telegram Bot</div>
         <div class="project-desc">
@@ -1233,46 +1171,36 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
     counterObs.observe(el);
   });
 
-  /* Stack map interaction */
-  var stackNodes = document.querySelectorAll('.stack-node');
-  var stackLines = document.querySelector('.stack-lines');
-  stackNodes.forEach(function(node) {
-    function activate() {
-      stackNodes.forEach(function(n) { n.classList.remove('active'); n.classList.add('dimmed'); });
-      node.classList.remove('dimmed');
-      node.classList.add('active');
-      if (stackLines) stackLines.style.opacity = '0.15';
-      var group = node.getAttribute('data-group');
-      document.querySelectorAll('.skill-tag').forEach(function(tag) {
-        var parent = tag.closest('.skill-block');
-        if (!parent) return;
-        var title = parent.querySelector('.skill-block-title');
-        if (!title) return;
-        var t = title.textContent.toLowerCase();
-        var match = false;
-        if (group === 'infra' && t.indexOf('infra') !== -1) match = true;
-        if (group === 'monitoring' && t.indexOf('monitor') !== -1) match = true;
-        if (group === 'security' && t.indexOf('security') !== -1) match = true;
-        if (group === 'scripting' && (t.indexOf('script') !== -1 || t.indexOf('game') !== -1)) match = true;
-        if (group === 'gamedev' && t.indexOf('game') !== -1) match = true;
-        if (group === 'auto' && t.indexOf('game') !== -1) match = true;
-        if (group === 'hub') match = true;
-        tag.style.opacity = match ? '1' : '0.3';
-        tag.style.transform = match ? 'scale(1.05)' : '';
+  /* Clickable skill tags → highlight matching experience & projects */
+  var hint = document.getElementById('stackHint');
+  if (hint) hint.textContent = 'Нажми на навык — покажу где он используется ↓';
+  var activeTag = null;
+  var targets = document.querySelectorAll('.timeline-item[data-tags], .project-showcase[data-tags], .project-card[data-tags]');
+  document.querySelectorAll('.skill-tag').forEach(function(tag) {
+    tag.addEventListener('click', function() {
+      var name = tag.textContent.trim().toLowerCase();
+      if (activeTag === tag) {
+        tag.classList.remove('active-tag');
+        activeTag = null;
+        targets.forEach(function(t) { t.classList.remove('highlight', 'dimmed-item'); });
+        if (hint) hint.textContent = 'Нажми на навык — покажу где он используется ↓';
+        return;
+      }
+      if (activeTag) activeTag.classList.remove('active-tag');
+      tag.classList.add('active-tag');
+      activeTag = tag;
+      var found = 0;
+      targets.forEach(function(t) {
+        var tags = (t.getAttribute('data-tags') || '').split(',');
+        var match = tags.some(function(x) { return x.trim() === name; });
+        t.classList.toggle('highlight', match);
+        t.classList.toggle('dimmed-item', !match);
+        if (match) found++;
       });
-    }
-    function deactivate() {
-      stackNodes.forEach(function(n) { n.classList.remove('active', 'dimmed'); });
-      if (stackLines) stackLines.style.opacity = '0.4';
-      document.querySelectorAll('.skill-tag').forEach(function(tag) {
-        tag.style.opacity = '';
-        tag.style.transform = '';
-      });
-    }
-    node.addEventListener('mouseenter', activate);
-    node.addEventListener('focus', activate);
-    node.addEventListener('mouseleave', deactivate);
-    node.addEventListener('blur', deactivate);
+      if (hint) hint.textContent = found ? 'Найдено: ' + found + ' — кликни ещё раз чтобы сбросить' : 'Не найдено совпадений';
+      var first = document.querySelector('.timeline-item.highlight, .project-showcase.highlight, .project-card.highlight');
+      if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
   });
 
   /* Scroll progress bar */
