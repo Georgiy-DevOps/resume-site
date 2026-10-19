@@ -2,6 +2,11 @@
 <meta property="og:title" content="Георгий — DevOps Engineer">
 <meta property="og:description" content="Продакшн-инфраструктура, мониторинг, серверная безопасность, автомобильные embedded-системы. Москва.">
 <meta property="og:type" content="profile">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Георгий — DevOps Engineer">
+<meta name="twitter:description" content="Production infrastructure, monitoring, server security, automotive embedded systems. Moscow.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='12' width='100' height='100' fill='%230a0f0d'/><text x='50' y='68' text-anchor='middle' font-size='52' font-family='monospace' fill='%2334d399'>G</text></svg>">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,wght@0,400;1,400&display=swap">
 <style>
@@ -708,7 +713,7 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
 
 /* ── Print styles ── */
 @media print {
-  .scroll-progress, .fixed-controls, .anchor-nav, .theme-toggle { display: none !important; }
+  .scroll-progress, .fixed-controls, .anchor-nav, .theme-toggle, #langToggle { display: none !important; }
   body { background: #fff; color: #1a1f1c; padding: 0; font-size: 11pt; }
   .page { max-width: 100%; padding: 0; }
   .hero { min-height: auto; padding-bottom: 24px; }
@@ -734,6 +739,7 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
 
 <!-- Fixed controls -->
 <div class="fixed-controls">
+  <button class="ctrl-btn" id="langToggle" aria-label="Switch language" title="RU / EN"><span id="langLabel" style="font-size:11px;font-weight:600;letter-spacing:0.04em">EN</span></button>
   <button class="ctrl-btn" id="themeToggle" aria-label="Переключить тему"><span id="themeIcon">&#9790;</span></button>
   <button class="ctrl-btn" id="printBtn" aria-label="Скачать PDF" title="Печать / PDF">&#8681;</button>
 </div>
@@ -755,23 +761,23 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
   <!-- Hero -->
   <section class="hero reveal">
     <img class="hero-photo" src="photo.webp" alt="Георгий">
-    <div class="hero-eyebrow">DevOps Engineer / Москва</div>
-    <h1>Георгий</h1>
+    <div class="hero-eyebrow" data-i18n="hero-eyebrow">DevOps Engineer / Москва</div>
+    <h1 data-i18n="hero-name">Георгий</h1>
     <div class="hero-pillars">
-      <span class="hero-pillar">Инфраструктура</span>
-      <span class="hero-pillar">Безопасность</span>
-      <span class="hero-pillar">Мониторинг</span>
+      <span class="hero-pillar" data-i18n="pillar-1">Инфраструктура</span>
+      <span class="hero-pillar" data-i18n="pillar-2">Безопасность</span>
+      <span class="hero-pillar" data-i18n="pillar-3">Мониторинг</span>
     </div>
-    <p class="hero-sub">Серверы работают. Данные в безопасности. Продакшн под контролем.</p>
+    <p class="hero-sub" data-i18n="hero-sub">Серверы работают. Данные в безопасности. Продакшн под контролем.</p>
     <div class="hero-line"></div>
   </section>
 
   <!-- Contacts -->
   <div class="contacts-row reveal">
     <div class="contact-item" data-copy="+79031605894" tabindex="0" role="button">
-      <span class="contact-label">Телефон</span>
+      <span class="contact-label" data-i18n="c-phone">Телефон</span>
       +7 903 160 5894
-      <span class="copy-toast">Скопировано</span>
+      <span class="copy-toast" data-i18n="copied">Скопировано</span>
     </div>
     <a class="contact-item" href="https://t.me/bdkillchain" target="_blank" rel="noopener">
       <span class="contact-label">Telegram</span>
@@ -780,7 +786,7 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
     <div class="contact-item" data-copy="tonytugboat79@gmail.com" tabindex="0" role="button">
       <span class="contact-label">Email</span>
       tonytugboat79@gmail.com
-      <span class="copy-toast">Скопировано</span>
+      <span class="copy-toast" data-i18n="copied">Скопировано</span>
     </div>
     <a class="contact-item" href="https://github.com/Georgiy-DevOps" target="_blank" rel="noopener">
       <span class="contact-label">GitHub</span>
@@ -792,10 +798,10 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
   <section class="section reveal" id="about">
     <div class="section-header">
       <span class="section-num">01</span>
-      <span class="section-title">О себе</span>
+      <span class="section-title" data-i18n="s-about">О себе</span>
       <span class="section-line"></span>
     </div>
-    <div class="about-text">
+    <div class="about-text" data-i18n-html="about-text">
       DevOps-инженер с практическим опытом в <strong>серверной инфраструктуре</strong>, мониторинге и информационной безопасности.
       Самостоятельно выстроил продакшн-окружение из трёх серверов с полным стеком наблюдаемости.
       Работаю с <strong>автомобильными embedded-системами</strong> — головные устройства Qualcomm, телематика MediaTek, диагностика через ADB.
@@ -808,7 +814,7 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
   <section class="section reveal" id="stack">
     <div class="section-header">
       <span class="section-num">02</span>
-      <span class="section-title">Стек</span>
+      <span class="section-title" data-i18n="s-stack">Стек</span>
       <span class="section-line"></span>
     </div>
     <div class="skills-columns">
@@ -863,23 +869,23 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
       </div>
     </div>
 
-    <div class="stack-hint reveal" id="stackHint"></div>
+    <div class="stack-hint reveal" id="stackHint" data-i18n="stack-hint"></div>
   </section>
 
   <!-- 03 Experience -->
   <section class="section" id="experience">
     <div class="section-header reveal">
       <span class="section-num">03</span>
-      <span class="section-title">Опыт</span>
+      <span class="section-title" data-i18n="s-exp">Опыт</span>
       <span class="section-line"></span>
     </div>
     <div class="timeline">
       <div class="timeline-item reveal" data-tags="linux,docker,docker compose,systemd,nginx,git,ci/cd,grafana,prometheus,loki,alloy,alertmanager,beszel,fail2ban,iptables,ufw,ssh hardening,bash,python,tcam">
         <div class="timeline-dot"></div>
-        <div class="timeline-date">2026 — настоящее время</div>
+        <div class="timeline-date" data-i18n="t1-date">2026 — настоящее время</div>
         <div class="timeline-role">DevOps Engineer</div>
         <div class="timeline-company">ByteDeppSoft</div>
-        <div class="timeline-desc">
+        <div class="timeline-desc" data-i18n-html="t1-desc">
           <ul>
             <li>Администрирование 3 продакшн-серверов Ubuntu/Debian — uptime 99.8%, среднее время реакции на инцидент &lt; 30 мин</li>
             <li>Развёртывание стека мониторинга из 6 сервисов (Grafana, Prometheus, Loki, Alloy, Alertmanager, Beszel) — покрытие алертами 100% серверов</li>
@@ -892,10 +898,10 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
       </div>
       <div class="timeline-item reveal" data-tags="adb,android,ssh tunneling,bash,python">
         <div class="timeline-dot"></div>
-        <div class="timeline-date">2026 — настоящее время</div>
-        <div class="timeline-role">Системный инженер</div>
+        <div class="timeline-date" data-i18n="t2-date">2026 — настоящее время</div>
+        <div class="timeline-role" data-i18n="t2-role">Системный инженер</div>
         <div class="timeline-company">Zeecar</div>
-        <div class="timeline-desc">
+        <div class="timeline-desc" data-i18n-html="t2-desc">
           <ul>
             <li>Диагностическое оборудование Zeekr — настройка ЗДС, VBF, сертификатов безопасности для 10+ автомобилей</li>
             <li>ADB-доступ к головным устройствам SA8295 (Android 12) — русификация и конфигурация, обслужено 20+ устройств</li>
@@ -911,25 +917,25 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
   <section class="section" id="achievements">
     <div class="section-header reveal">
       <span class="section-num">04</span>
-      <span class="section-title">Достижения</span>
+      <span class="section-title" data-i18n="s-ach">Достижения</span>
       <span class="section-line"></span>
     </div>
     <div class="achievements-grid">
       <div class="achievement-card reveal reveal-delay-1">
         <div class="achievement-num" data-target="3">3</div>
-        <div class="achievement-label">Продакшн-сервера под управлением</div>
+        <div class="achievement-label" data-i18n="a1">Продакшн-сервера под управлением</div>
       </div>
       <div class="achievement-card reveal reveal-delay-2">
         <div class="achievement-num" data-target="6">6</div>
-        <div class="achievement-label">Сервисов мониторинга в стеке</div>
+        <div class="achievement-label" data-i18n="a2">Сервисов мониторинга в стеке</div>
       </div>
       <div class="achievement-card warm-card reveal reveal-delay-3">
         <div class="achievement-num" data-target="0">0</div>
-        <div class="achievement-label">Критических инцидентов на продакшне после настройки защиты</div>
+        <div class="achievement-label" data-i18n="a3">Критических инцидентов на продакшне после настройки защиты</div>
       </div>
       <div class="achievement-card warm-card reveal reveal-delay-4">
         <div class="achievement-num" data-target="~25">~25</div>
-        <div class="achievement-label">C#-скриптов в дипломном проекте Unity HDRP</div>
+        <div class="achievement-label" data-i18n="a4">C#-скриптов в дипломном проекте Unity HDRP</div>
       </div>
     </div>
   </section>
@@ -938,7 +944,7 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
   <section class="section" id="projects">
     <div class="section-header reveal">
       <span class="section-num">05</span>
-      <span class="section-title">Проекты</span>
+      <span class="section-title" data-i18n="s-proj">Проекты</span>
       <span class="section-line"></span>
     </div>
     <div class="projects-grid">
@@ -947,7 +953,7 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
         <div>
           <div class="project-name">ByteDepp Control Panel</div>
           <div class="project-type">Full-stack Web App</div>
-          <div class="project-desc">
+          <div class="project-desc" data-i18n="p1-desc">
             Панель управления автомобилями ByteDepp: привязка VIN к устройствам, клиентский кабинет с записью на сервис, админка с журналом, CSRF-защита, SQLite, Docker, CI/CD.
           </div>
         </div>
@@ -977,7 +983,7 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
           <div class="project-type">Beszel + Grafana + Prometheus + Loki</div>
         </div>
       </div>
-      <div class="project-desc">Полный стек наблюдаемости для 3 продакшн-серверов: метрики, логи, алерты в Telegram. Beszel как лёгкий хаб мониторинга, Grafana + Prometheus для глубокой аналитики, Loki + Alloy для централизованных логов, Alertmanager для оповещений.</div>
+      <div class="project-desc" data-i18n="p2-desc">Полный стек наблюдаемости для 3 продакшн-серверов: метрики, логи, алерты в Telegram. Beszel как лёгкий хаб мониторинга, Grafana + Prometheus для глубокой аналитики, Loki + Alloy для централизованных логов, Alertmanager для оповещений.</div>
       <div class="project-tech">
         <span class="project-tech-tag">Beszel</span>
         <span class="project-tech-tag">Grafana</span>
@@ -997,7 +1003,7 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
       <a class="project-card reveal reveal-delay-1" href="https://github.com/Georgiy-DevOps/aegis-arena" target="_blank" rel="noopener" data-tags="python,docker">
         <div class="project-name">Aegis Arena</div>
         <div class="project-type">GameDevSecOps / Backend</div>
-        <div class="project-desc">
+        <div class="project-desc" data-i18n="p3-desc">
           Безопасный мультиплеерный game-бэкенд: JWT-авторизация, серверная валидация скоров, анти-чит, PostgreSQL, Redis, CI через GitHub Actions.
         </div>
         <div class="project-tech">
@@ -1010,8 +1016,8 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
       </a>
       <div class="project-card reveal reveal-delay-2" data-tags="c#,unity,hdrp">
         <div class="project-name">Depth-7: Evacuation</div>
-        <div class="project-type">Дипломный проект / Unity HDRP</div>
-        <div class="project-desc">
+        <div class="project-type" data-i18n="p4-type">Дипломный проект / Unity HDRP</div>
+        <div class="project-desc" data-i18n="p4-desc">
           3D survival-игра от первого лица. Система задач, взаимодействие с объектами,
           цикл день/ночь, FPS-контроллер на Input System, lightmapping, процедурный лес.
         </div>
@@ -1025,7 +1031,7 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
       <div class="project-card reveal reveal-delay-3" data-tags="adb,android,bash,tcam">
         <div class="project-name">TCAM SIM Patch Tool</div>
         <div class="project-type">Open Source</div>
-        <div class="project-desc">
+        <div class="project-desc" data-i18n="p5-desc">
           Патчинг SIM-конфигурации телематических модулей Zeekr 9X и Lynk&Co 900 для российских операторов.
           RIL-патчинг, APN, backup/restore.
         </div>
@@ -1038,7 +1044,7 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
       <a class="project-card reveal reveal-delay-4" href="https://github.com/Georgiy-DevOps/planner-bot" target="_blank" rel="noopener" data-tags="python">
         <div class="project-name">Planner Bot</div>
         <div class="project-type">Telegram Bot</div>
-        <div class="project-desc">
+        <div class="project-desc" data-i18n="p6-desc">
           Телеграм-бот для планирования дня с веб-интерфейсом. Расписание, задачи, напоминания.
         </div>
         <div class="project-tech">
@@ -1054,13 +1060,13 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
   <section class="section reveal" id="education">
     <div class="section-header">
       <span class="section-num">06</span>
-      <span class="section-title">Образование</span>
+      <span class="section-title" data-i18n="s-edu">Образование</span>
       <span class="section-line"></span>
     </div>
     <div class="edu-block">
       <div>
-        <div class="edu-name">Московский Политехнический Университет</div>
-        <div class="edu-faculty">Программное обеспечение игровой компьютерной индустрии</div>
+        <div class="edu-name" data-i18n="edu-name">Московский Политехнический Университет</div>
+        <div class="edu-faculty" data-i18n="edu-fac">Программное обеспечение игровой компьютерной индустрии</div>
       </div>
       <div class="edu-date">2023 — 2027</div>
     </div>
@@ -1070,13 +1076,13 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
   <section class="section reveal" id="languages">
     <div class="section-header">
       <span class="section-num">07</span>
-      <span class="section-title">Языки</span>
+      <span class="section-title" data-i18n="s-lang">Языки</span>
       <span class="section-line"></span>
     </div>
     <div class="langs-row">
       <div class="lang-item">
         <div class="lang-name">Русский</div>
-        <div class="lang-level">Родной</div>
+        <div class="lang-level" data-i18n="lang-ru">Родной</div>
       </div>
       <div class="lang-item">
         <div class="lang-name">English</div>
@@ -1089,29 +1095,29 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
   <section class="section reveal" id="cta">
     <div class="section-header">
       <span class="section-num">08</span>
-      <span class="section-title">Чем могу быть полезен</span>
+      <span class="section-title" data-i18n="s-cta">Чем могу быть полезен</span>
       <span class="section-line"></span>
     </div>
     <div class="cta-list">
       <div class="cta-item">
         <span class="cta-marker">&#8594;</span>
-        <span>Настройка и администрирование Linux-серверов, Docker-инфраструктуры, CI/CD пайплайнов</span>
+        <span data-i18n="cta-1">Настройка и администрирование Linux-серверов, Docker-инфраструктуры, CI/CD пайплайнов</span>
       </div>
       <div class="cta-item">
         <span class="cta-marker">&#8594;</span>
-        <span>Развёртывание стеков мониторинга и алертинга с нуля</span>
+        <span data-i18n="cta-2">Развёртывание стеков мониторинга и алертинга с нуля</span>
       </div>
       <div class="cta-item">
         <span class="cta-marker">&#8594;</span>
-        <span>Серверная безопасность, аудит, hardening, защита от несанкционированного доступа</span>
+        <span data-i18n="cta-3">Серверная безопасность, аудит, hardening, защита от несанкционированного доступа</span>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <div class="footer-bar">
-    <div class="footer-left">Москва, 2026</div>
-    <div class="footer-right"><span class="status-dot"></span>Открыт к предложениям</div>
+    <div class="footer-left" data-i18n="footer-loc">Москва, 2026</div>
+    <div class="footer-right"><span class="status-dot"></span><span data-i18n="footer-status">Открыт к предложениям</span></div>
   </div>
 
 </div>
@@ -1173,7 +1179,12 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
 
   /* Clickable skill tags → highlight matching experience & projects */
   var hint = document.getElementById('stackHint');
-  if (hint) hint.textContent = 'Нажми на навык — покажу где он используется ↓';
+  var hintText = { ru: 'Нажми на навык — покажу где он используется ↓', en: 'Click a skill to see where it’s used ↓' };
+  var hintFound = { ru: 'Найдено: ', en: 'Found: ' };
+  var hintReset = { ru: ' — кликни ещё раз чтобы сбросить', en: ' — click again to reset' };
+  var hintNone = { ru: 'Не найдено совпадений', en: 'No matches found' };
+  function getL() { return currentLang || 'ru'; }
+  if (hint) hint.textContent = hintText[getL()];
   var activeTag = null;
   var targets = document.querySelectorAll('.timeline-item[data-tags], .project-showcase[data-tags], .project-card[data-tags]');
   document.querySelectorAll('.skill-tag').forEach(function(tag) {
@@ -1183,7 +1194,7 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
         tag.classList.remove('active-tag');
         activeTag = null;
         targets.forEach(function(t) { t.classList.remove('highlight', 'dimmed-item'); });
-        if (hint) hint.textContent = 'Нажми на навык — покажу где он используется ↓';
+        if (hint) hint.textContent = hintText[getL()];
         return;
       }
       if (activeTag) activeTag.classList.remove('active-tag');
@@ -1197,7 +1208,7 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
         t.classList.toggle('dimmed-item', !match);
         if (match) found++;
       });
-      if (hint) hint.textContent = found ? 'Найдено: ' + found + ' — кликни ещё раз чтобы сбросить' : 'Не найдено совпадений';
+      if (hint) hint.textContent = found ? hintFound[getL()] + found + hintReset[getL()] : hintNone[getL()];
       var first = document.querySelector('.timeline-item.highlight, .project-showcase.highlight, .project-card.highlight');
       if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
@@ -1269,6 +1280,109 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
   document.getElementById('printBtn').addEventListener('click', function() {
     window.print();
   });
+
+  /* Language toggle RU/EN */
+  var i18n = {
+    en: {
+      'hero-eyebrow': 'DevOps Engineer / Moscow',
+      'hero-name': 'Georgiy',
+      'pillar-1': 'Infrastructure',
+      'pillar-2': 'Security',
+      'pillar-3': 'Monitoring',
+      'hero-sub': 'Servers run. Data is safe. Production under control.',
+      'c-phone': 'Phone',
+      'copied': 'Copied',
+      's-about': 'About',
+      's-stack': 'Stack',
+      's-exp': 'Experience',
+      's-ach': 'Achievements',
+      's-proj': 'Projects',
+      's-edu': 'Education',
+      's-lang': 'Languages',
+      's-cta': 'How I can help',
+      'a1': 'Production servers managed',
+      'a2': 'Monitoring services in the stack',
+      'a3': 'Critical incidents after security setup',
+      'a4': 'C# scripts in Unity HDRP thesis project',
+      't1-date': '2026 — present',
+      't2-date': '2026 — present',
+      't2-role': 'Systems Engineer',
+      'p1-desc': 'ByteDepp vehicle management panel: VIN-to-device binding, customer portal with service booking, admin dashboard with logs, CSRF protection, SQLite, Docker, CI/CD.',
+      'p2-desc': 'Full observability stack for 3 production servers: metrics, logs, Telegram alerts. Beszel as lightweight monitoring hub, Grafana + Prometheus for deep analytics, Loki + Alloy for centralized logs, Alertmanager for notifications.',
+      'p3-desc': 'Secure multiplayer game backend: JWT auth, server-side score validation, anti-cheat, PostgreSQL, Redis, CI via GitHub Actions.',
+      'p4-type': 'Thesis Project / Unity HDRP',
+      'p4-desc': '3D first-person survival game. Quest system, object interaction, day/night cycle, FPS controller on Input System, lightmapping, procedural forest.',
+      'p5-desc': 'SIM configuration patching for Zeekr 9X and Lynk&Co 900 telematics modules for Russian carriers. RIL patching, APN, backup/restore.',
+      'p6-desc': 'Telegram bot for daily planning with web interface. Schedule, tasks, reminders.',
+      'edu-name': 'Moscow Polytechnic University',
+      'edu-fac': 'Software Engineering for Game Industry',
+      'lang-ru': 'Native',
+      'cta-1': 'Setup and administration of Linux servers, Docker infrastructure, CI/CD pipelines',
+      'cta-2': 'Deploying monitoring and alerting stacks from scratch',
+      'cta-3': 'Server security, auditing, hardening, protection against unauthorized access',
+      'footer-loc': 'Moscow, 2026',
+      'footer-status': 'Open to opportunities',
+      'stack-hint': 'Click a skill to see where it’s used ↓'
+    },
+    ru: {
+      'hero-eyebrow': 'DevOps Engineer / Москва',
+      'hero-name': 'Георгий',
+      'pillar-1': 'Инфраструктура',
+      'pillar-2': 'Безопасность',
+      'pillar-3': 'Мониторинг',
+      'hero-sub': 'Серверы работают. Данные в безопасности. Продакшн под контролем.',
+      'c-phone': 'Телефон',
+      'copied': 'Скопировано',
+      's-about': 'О себе',
+      's-stack': 'Стек',
+      's-exp': 'Опыт',
+      's-ach': 'Достижения',
+      's-proj': 'Проекты',
+      's-edu': 'Образование',
+      's-lang': 'Языки',
+      's-cta': 'Чем могу быть полезен',
+      'stack-hint': 'Нажми на навык — покажу где он используется ↓'
+    }
+  };
+  var i18nHtml = {
+    en: {
+      'about-text': 'DevOps engineer with hands-on experience in <strong>server infrastructure</strong>, monitoring, and information security. Independently built a production environment across three servers with a full observability stack. Working with <strong>automotive embedded systems</strong> — Qualcomm head units, MediaTek telematics, diagnostics via ADB. 4th-year student at Moscow Polytechnic University (game industry software engineering). Looking for a role with ambitious challenges that directly impact <strong>product and business</strong>.',
+      't1-desc': '<ul><li>Administration of 3 production Ubuntu/Debian servers — uptime 99.8%, avg incident response &lt; 30 min</li><li>Deployed monitoring stack of 6 services (Grafana, Prometheus, Loki, Alloy, Alertmanager, Beszel) — 100% alert coverage</li><li>Server security: fail2ban, iptables, UFW, SSH hardening — 0 breaches, 500+ brute-force attempts blocked/month</li><li>Diagnosed and resolved OOM on monitoring server (4 GB RAM) — 40% memory reduction via container limits and swap</li><li>Set up restic backups to offsite server (750 GB), automated daily backups — RPO &lt; 24h</li><li>Built TCAM SIM Patch Tool — telematics patching for Zeekr 9X / Lynk&Co, reduced operation time from 2h to 15 min</li></ul>',
+      't2-desc': '<ul><li>Zeekr diagnostic equipment — ZDS, VBF, security certificate configuration for 10+ vehicles</li><li>ADB access to SA8295 head units (Android 12) — localization and configuration, 20+ devices serviced</li><li>Implemented Bitrix24 CRM for sales and service departments — automated 5-stage sales funnel</li><li>Developed SSH tunnels for remote access to vehicle systems — diagnostics time reduced 3x</li></ul>'
+    },
+    ru: {
+      'about-text': 'DevOps-инженер с практическим опытом в <strong>серверной инфраструктуре</strong>, мониторинге и информационной безопасности. Самостоятельно выстроил продакшн-окружение из трёх серверов с полным стеком наблюдаемости. Работаю с <strong>автомобильными embedded-системами</strong> — головные устройства Qualcomm, телематика MediaTek, диагностика через ADB. Студент 4-го курса Московского Политеха (программное обеспечение игровой индустрии). Ищу позицию с амбициозными задачами, которые напрямую влияют на <strong>продукт и бизнес</strong>.',
+      't1-desc': '<ul><li>Администрирование 3 продакшн-серверов Ubuntu/Debian — uptime 99.8%, среднее время реакции на инцидент &lt; 30 мин</li><li>Развёртывание стека мониторинга из 6 сервисов (Grafana, Prometheus, Loki, Alloy, Alertmanager, Beszel) — покрытие алертами 100% серверов</li><li>Защита серверов: fail2ban, iptables, UFW, SSH hardening — 0 успешных взломов, заблокировано 500+ брутфорс-попыток/мес</li><li>Диагностика и устранение OOM на сервере мониторинга (4 ГБ RAM) — снижение потребления памяти на 40% через лимиты контейнеров и swap</li><li>Настройка restic-бэкапов на офсайт-сервер (750 ГБ), автоматизация ежедневного бэкапа — RPO &lt; 24ч</li><li>Создание TCAM SIM Patch Tool — патчинг телематики Zeekr 9X / Lynk&Co, сокращение времени операции с 2ч до 15 мин</li></ul>',
+      't2-desc': '<ul><li>Диагностическое оборудование Zeekr — настройка ЗДС, VBF, сертификатов безопасности для 10+ автомобилей</li><li>ADB-доступ к головным устройствам SA8295 (Android 12) — русификация и конфигурация, обслужено 20+ устройств</li><li>Внедрение CRM Bitrix24 для отдела продаж и сервиса — автоматизация воронки из 5 этапов</li><li>Разработка SSH-туннелей для удалённого доступа к автомобильным системам — время диагностики сокращено в 3 раза</li></ul>'
+    }
+  };
+  var currentLang = 'ru';
+  var langLabel = document.getElementById('langLabel');
+  var langBtn = document.getElementById('langToggle');
+
+  function applyLang(lang) {
+    currentLang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(function(el) {
+      var key = el.getAttribute('data-i18n');
+      if (i18n[lang] && i18n[lang][key]) el.textContent = i18n[lang][key];
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(function(el) {
+      var key = el.getAttribute('data-i18n-html');
+      if (i18nHtml[lang] && i18nHtml[lang][key]) el.innerHTML = i18nHtml[lang][key];
+    });
+    langLabel.textContent = lang === 'ru' ? 'EN' : 'RU';
+    document.documentElement.setAttribute('lang', lang);
+    try { localStorage.setItem('lang', lang); } catch(e) {}
+  }
+
+  langBtn.addEventListener('click', function() {
+    applyLang(currentLang === 'ru' ? 'en' : 'ru');
+  });
+
+  try {
+    var savedLang = localStorage.getItem('lang');
+    if (savedLang === 'en') applyLang('en');
+  } catch(e) {}
 
   /* Click-to-copy contacts */
   document.querySelectorAll('[data-copy]').forEach(function(el) {
