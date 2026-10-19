@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(52,211,153,0.06)" stroke-width="0.5"/>
+    </pattern>
+    <radialGradient id="glow" cx="85%" cy="15%" r="35%">
+      <stop offset="0%" stop-color="rgba(52,211,153,0.15)"/>
+      <stop offset="100%" stop-color="rgba(52,211,153,0)"/>
+    </radialGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="rgba(52,211,153,0)"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0a0f0d"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <!-- Photo circle placeholder -->
+  <circle cx="220" cy="290" r="100" fill="#111916" stroke="#34d399" stroke-width="3"/>
+  <text x="220" y="305" text-anchor="middle" font-family="monospace" font-size="64" fill="#34d399" font-weight="bold">G</text>
+  <!-- Text -->
+  <text x="380" y="230" font-family="monospace" font-size="14" fill="#34d399" letter-spacing="3" text-transform="uppercase">DEVOPS ENGINEER / MOSCOW</text>
+  <text x="380" y="300" font-family="'Space Grotesk',system-ui,sans-serif" font-size="72" fill="#dce8e0" font-weight="700" letter-spacing="-1">Georgiy</text>
+  <!-- Pillars -->
+  <circle cx="388" cy="340" r="4" fill="#34d399"/>
+  <text x="400" y="345" font-family="monospace" font-size="13" fill="#7a8f82" letter-spacing="2">INFRASTRUCTURE</text>
+  <circle cx="570" cy="340" r="4" fill="#e8c87a"/>
+  <text x="582" y="345" font-family="monospace" font-size="13" fill="#7a8f82" letter-spacing="2">SECURITY</text>
+  <circle cx="710" cy="340" r="4" fill="#34d399"/>
+  <text x="722" y="345" font-family="monospace" font-size="13" fill="#7a8f82" letter-spacing="2">MONITORING</text>
+  <!-- Subtitle -->
+  <text x="380" y="395" font-family="Georgia,serif" font-size="19" fill="#7a8f82" font-style="italic">Production servers. Observability stack.</text>
+  <text x="380" y="422" font-family="Georgia,serif" font-size="19" fill="#7a8f82" font-style="italic">Automotive embedded systems.</text>
+  <!-- Bottom line -->
+  <rect x="80" y="555" width="1040" height="1" fill="url(#line)"/>
+  <text x="1120" y="590" text-anchor="end" font-family="monospace" font-size="13" fill="#7a8f82" letter-spacing="1">resume · 2026</text>
+</svg>

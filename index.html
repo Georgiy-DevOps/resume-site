@@ -4,7 +4,11 @@
 <meta property="og:type" content="profile">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:locale:alternate" content="en_US">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="http://130.49.146.241:8080/og-image.svg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://130.49.146.241:8080/og-image.svg">
 <meta name="twitter:title" content="Георгий — DevOps Engineer">
 <meta name="twitter:description" content="Production infrastructure, monitoring, server security, automotive embedded systems. Moscow.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='12' width='100' height='100' fill='%230a0f0d'/><text x='50' y='68' text-anchor='middle' font-size='52' font-family='monospace' fill='%2334d399'>G</text></svg>">
@@ -225,6 +229,16 @@ body {
   max-width: 520px;
   line-height: 1.6;
 }
+.hero-sub .typewriter-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: var(--accent);
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: blink 0.7s step-end infinite;
+}
+@keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
 .hero-line {
   width: 100%;
   height: 1px;
@@ -1134,6 +1148,33 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
     document.querySelectorAll('.reveal').forEach(function(el) { obs.observe(el); });
+
+    /* Typewriter effect on hero subtitle */
+    var heroSub = document.querySelector('.hero-sub');
+    if (heroSub) {
+      var fullText = heroSub.textContent;
+      heroSub.textContent = '';
+      var cursor = document.createElement('span');
+      cursor.className = 'typewriter-cursor';
+      heroSub.appendChild(cursor);
+      var twObs = new IntersectionObserver(function(entries) {
+        if (entries[0].isIntersecting) {
+          twObs.unobserve(heroSub);
+          var i = 0;
+          function typeNext() {
+            if (i < fullText.length) {
+              heroSub.insertBefore(document.createTextNode(fullText[i]), cursor);
+              i++;
+              setTimeout(typeNext, 40 + Math.random() * 30);
+            } else {
+              setTimeout(function() { cursor.style.display = 'none'; }, 2000);
+            }
+          }
+          typeNext();
+        }
+      }, { threshold: 0.5 });
+      twObs.observe(heroSub);
+    }
 
     /* Timeline dot pulse */
     var dotObs = new IntersectionObserver(function(entries) {
