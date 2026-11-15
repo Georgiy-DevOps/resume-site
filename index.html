@@ -1,19 +1,28 @@
-﻿<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Георгий — DevOps Engineer</title>
-<meta property="og:title" content="Георгий — DevOps Engineer">
-<meta property="og:description" content="Продакшн-инфраструктура, мониторинг, серверная безопасность, автомобильные embedded-системы. Москва.">
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Георгий — DevOps / DevSecOps Engineer</title>
+<meta property="og:title" content="Георгий — DevOps / DevSecOps Engineer">
+<meta property="og:description" content="Hardening Linux, мониторинг, DevSecOps-пайплайны: SAST, SCA, сканирование контейнеров, DAST. Москва.">
 <meta property="og:type" content="profile">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:locale:alternate" content="en_US">
-<meta property="og:image" content="https://georgiy-devops.ru/og-image.svg">
+<meta property="og:image" content="https://georgiy-devops.ru/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://georgiy-devops.ru/og-image.svg">
-<meta name="twitter:title" content="Георгий — DevOps Engineer">
-<meta name="twitter:description" content="Production infrastructure, monitoring, server security, automotive embedded systems. Moscow.">
+<meta name="twitter:image" content="https://georgiy-devops.ru/og-image.png">
+<meta name="twitter:title" content="Георгий — DevOps / DevSecOps Engineer">
+<meta name="twitter:description" content="Linux hardening, monitoring, DevSecOps pipelines: SAST, SCA, container scanning, DAST. Moscow.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='12' width='100' height='100' fill='%230a0f0d'/><text x='50' y='68' text-anchor='middle' font-size='52' font-family='monospace' fill='%2334d399'>G</text></svg>">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,wght@0,400;1,400&display=swap">
+<!-- Шрифты локально: Google Fonts передавал IP посетителей третьей стороне -->
+<link rel="stylesheet" href="fonts.css">
+<meta name="description" content="DevOps-инженер с фокусом на безопасность: hardening Linux, мониторинг, DevSecOps-пайплайны (SAST, SCA, Trivy, OWASP ZAP). Москва.">
+<link rel="canonical" href="https://georgiy-devops.ru/">
+<!-- Без JS контент не должен оставаться невидимым (краулеры, печать, NoScript) -->
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 <style>
 :root {
   --bg: #0a0f0d;
@@ -748,6 +757,8 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
   .status-dot { animation: none !important; background: #333 !important; }
 }
 </style>
+</head>
+<body>
 
 <!-- Scroll progress bar -->
 <div class="scroll-progress" id="scrollProgress"></div>
@@ -776,24 +787,19 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
   <!-- Hero -->
   <section class="hero reveal">
     <img class="hero-photo" src="photo.webp" alt="Георгий">
-    <div class="hero-eyebrow" data-i18n="hero-eyebrow">DevOps Engineer / Москва</div>
+    <div class="hero-eyebrow" data-i18n="hero-eyebrow">DevOps → DevSecOps / Москва</div>
     <h1 data-i18n="hero-name">Георгий</h1>
     <div class="hero-pillars">
       <span class="hero-pillar" data-i18n="pillar-1">Инфраструктура</span>
       <span class="hero-pillar" data-i18n="pillar-2">Безопасность</span>
-      <span class="hero-pillar" data-i18n="pillar-3">Мониторинг</span>
+      <span class="hero-pillar" data-i18n="pillar-3">Автоматизация</span>
     </div>
-    <p class="hero-sub" data-i18n="hero-sub">Серверы работают. Данные в безопасности. Продакшн под контролем.</p>
+    <p class="hero-sub" data-i18n="hero-sub">Безопасность встроена в пайплайн, а не прикручена в конце.</p>
     <div class="hero-line"></div>
   </section>
 
   <!-- Contacts -->
   <div class="contacts-row reveal">
-    <div class="contact-item" data-copy="+79031605894" tabindex="0" role="button">
-      <span class="contact-label" data-i18n="c-phone">Телефон</span>
-      +7 903 160 5894
-      <span class="copy-toast" data-i18n="copied">Скопировано</span>
-    </div>
     <a class="contact-item" href="https://t.me/bdkillchain" target="_blank" rel="noopener">
       <span class="contact-label">Telegram</span>
       @bdkillchain
@@ -817,12 +823,8 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
       <span class="section-line"></span>
     </div>
     <div class="about-text" data-i18n-html="about-text">
-      DevOps-инженер с практическим опытом в <strong>серверной инфраструктуре</strong>, мониторинге и информационной безопасности.
-      Самостоятельно выстроил продакшн-окружение из трёх серверов с полным стеком наблюдаемости.
-      Работаю с <strong>автомобильными embedded-системами</strong> — головные устройства Qualcomm, телематика MediaTek, диагностика через ADB.
-      Студент 4-го курса Московского Политеха (программное обеспечение игровой индустрии).
-      Ищу позицию с амбициозными задачами, которые напрямую влияют на <strong>продукт и бизнес</strong>.
-    </div>
+DevOps-инженер с фокусом на <strong>безопасность инфраструктуры и CI/CD</strong>. С сентября 2026 сопровождаю продакшн-серверы: hardening SSH и systemd-сервисов, auditd, fail2ban, зашифрованные бэкапы restic с автоматической проверкой восстановления, мониторинг на Grafana, Prometheus и Loki. В своём проекте Aegis Arena построил <strong>DevSecOps-пайплайн</strong> (SAST, SCA, сканирование контейнеров, DAST) и закрыл найденные им уязвимости. Работаю с <strong>автомобильными embedded-системами</strong>: головные устройства Qualcomm, телематика, диагностика через ADB. Студент 4-го курса Московского Политеха (программное обеспечение игровой индустрии). Цель — роль DevSecOps / Security Engineer.
+</div>
   </section>
 
   <!-- 02 Skills -->
@@ -865,14 +867,36 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
           <span class="skill-tag warm">SSH Hardening</span>
           <span class="skill-tag warm">VPN</span>
           <span class="skill-tag warm">SSH Tunneling</span>
+          <span class="skill-tag warm">nftables</span>
+          <span class="skill-tag warm">auditd</span>
+          <span class="skill-tag warm">systemd sandboxing</span>
+          <span class="skill-tag warm">restic</span>
+        </div>
+      </div>
+      <div class="skill-block reveal reveal-delay-3">
+        <div class="skill-block-title">AppSec &amp; DevSecOps</div>
+        <div class="skill-list">
+          <span class="skill-tag warm">GitHub Actions</span>
+          <span class="skill-tag warm">Semgrep</span>
+          <span class="skill-tag warm">CodeQL</span>
+          <span class="skill-tag warm">Bandit</span>
+          <span class="skill-tag warm">Trivy</span>
+          <span class="skill-tag warm">Gitleaks</span>
+          <span class="skill-tag warm">OWASP ZAP</span>
+          <span class="skill-tag warm">pip-audit</span>
+          <span class="skill-tag warm">OWASP Top 10</span>
+          <span class="skill-tag warm">JWT</span>
         </div>
       </div>
       <div class="skill-block reveal reveal-delay-4">
         <div class="skill-block-title">Scripting &amp; GameDev</div>
         <div class="skill-list">
           <span class="skill-tag">C#</span>
+          <span class="skill-tag">C++</span>
+          <span class="skill-tag">Go</span>
           <span class="skill-tag">Unity</span>
           <span class="skill-tag">HDRP</span>
+          <span class="skill-tag">Unreal Engine</span>
           <span class="skill-tag">Bash</span>
           <span class="skill-tag">Python</span>
           <span class="skill-tag">PowerShell</span>
@@ -895,21 +919,14 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
       <span class="section-line"></span>
     </div>
     <div class="timeline">
-      <div class="timeline-item reveal" data-tags="linux,docker,docker compose,systemd,nginx,git,ci/cd,grafana,prometheus,loki,alloy,alertmanager,beszel,fail2ban,iptables,ufw,ssh hardening,bash,python,tcam">
+      <div class="timeline-item reveal" data-tags="linux,docker,docker compose,systemd,nginx,git,ci/cd,grafana,prometheus,loki,alloy,alertmanager,beszel,fail2ban,iptables,ufw,ssh hardening,nftables,auditd,systemd sandboxing,restic,bash,python,tcam">
         <div class="timeline-dot"></div>
         <div class="timeline-date" data-i18n="t1-date">Сентябрь 2026 — настоящее время</div>
         <div class="timeline-role">DevOps Engineer</div>
         <div class="timeline-company">ByteDeppSoft</div>
         <div class="timeline-desc" data-i18n-html="t1-desc">
-          <ul>
-            <li>Администрирование 3 продакшн-серверов Ubuntu/Debian — uptime 99.8%, среднее время реакции на инцидент &lt; 30 мин</li>
-            <li>Развёртывание стека мониторинга из 6 сервисов (Grafana, Prometheus, Loki, Alloy, Alertmanager, Beszel) — покрытие алертами 100% серверов</li>
-            <li>Защита серверов: fail2ban, iptables, UFW, SSH hardening — 0 успешных взломов, заблокировано 500+ брутфорс-попыток/мес</li>
-            <li>Диагностика и устранение OOM на сервере мониторинга (4 ГБ RAM) — снижение потребления памяти на 40% через лимиты контейнеров и swap</li>
-            <li>Настройка restic-бэкапов на офсайт-сервер (750 ГБ), автоматизация ежедневного бэкапа — RPO &lt; 24ч</li>
-            <li>Создание TCAM SIM Patch Tool — патчинг телематики Zeekr 9X / Lynk&Co, сокращение времени операции с 2ч до 15 мин</li>
-          </ul>
-        </div>
+<ul><li>Сопровождение 3 продакшн-серверов Ubuntu/Debian: обновления ядра, разбор инцидентов по журналам (RCA зависания сервера при перезагрузке)</li><li>Стек мониторинга из 6 сервисов (Grafana, Prometheus, Loki, Alloy, Alertmanager, Beszel) с алертами в Telegram</li><li>Hardening: SSH только по ключам, fail2ban с эскалацией банов через nftables, изоляция systemd-сервисов, auditd на изменения SSH/sudo/фаервола, unattended-upgrades</li><li>Telegram-алерты на каждый успешный root-вход по SSH: IP источника, метод аутентификации, отпечаток ключа</li><li>Зашифрованные ежедневные бэкапы restic на офсайт-сервер с автоматической проверкой восстановления SQLite-баз (integrity_check, сверка SHA-256)</li><li>Устранение OOM на сервере мониторинга (4 ГБ RAM): лимиты контейнеров и swap, потребление памяти снижено на 40%</li><li>TCAM SIM Patch Tool: патчинг телематики Zeekr 9X / Lynk&amp;Co, операция сократилась с 2 ч до 15 мин</li></ul>
+</div>
       </div>
       <div class="timeline-item reveal" data-tags="adb,android,ssh tunneling,bash,python">
         <div class="timeline-dot"></div>
@@ -921,7 +938,7 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
             <li>Диагностическое оборудование Zeekr — настройка ЗДС, VBF, сертификатов безопасности для 10+ автомобилей</li>
             <li>ADB-доступ к головным устройствам SA8295 (Android 12) — русификация и конфигурация, обслужено 20+ устройств</li>
             <li>Развёртывание Frappe CRM на выделенном сервере — настройка MariaDB, Redis, Nginx, полный цикл от установки до продакшна</li>
-            <li>Разработка SSH-туннелей для удалённого доступа к автомобильным системам — время диагностики сокращено в 3 раза</li>
+            <li>SSH-туннели для удалённой диагностики автомобильных систем без выезда к машине</li>
           </ul>
         </div>
       </div>
@@ -945,12 +962,12 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
         <div class="achievement-label" data-i18n="a2">Сервисов мониторинга в стеке</div>
       </div>
       <div class="achievement-card warm-card reveal reveal-delay-3">
-        <div class="achievement-num" data-target="0">0</div>
-        <div class="achievement-label" data-i18n="a3">Критических инцидентов на продакшне после настройки защиты</div>
+        <div class="achievement-num" data-target="7">7</div>
+        <div class="achievement-label" data-i18n="a3">Security-инструментов в CI-пайплайне Aegis Arena</div>
       </div>
       <div class="achievement-card warm-card reveal reveal-delay-4">
-        <div class="achievement-num" data-target="~25">~25</div>
-        <div class="achievement-label" data-i18n="a4">C#-скриптов в дипломном проекте Unity HDRP</div>
+        <div class="achievement-num" data-target="6">6</div>
+        <div class="achievement-label" data-i18n="a4">Уязвимостей найдено и закрыто в собственном бэкенде</div>
       </div>
     </div>
   </section>
@@ -963,11 +980,27 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
       <span class="section-line"></span>
     </div>
     <div class="projects-grid">
-    <a class="project-showcase reveal" href="https://github.com/Georgiy-DevOps/Panel" target="_blank" rel="noopener" data-tags="python,docker,ci/cd">
+      <a class="project-card reveal" href="https://github.com/Georgiy-DevOps/aegis-arena" target="_blank" rel="noopener" data-tags="python,docker,ci/cd,github actions,semgrep,codeql,bandit,trivy,gitleaks,owasp zap,pip-audit,owasp top 10,jwt">
+        <div class="project-name">Aegis Arena</div>
+        <div class="project-type">DevSecOps / GameDev Backend</div>
+        <div class="project-desc" data-i18n="p3-desc">
+            Мультиплеерный game-бэкенд с DevSecOps-пайплайном: Gitleaks, Semgrep, CodeQL, pip-audit, Trivy и OWASP ZAP на каждый PR, сборка падает на HIGH/CRITICAL. Серверная валидация скоров (анти-чит), JWT, регрессионные тесты на абьюз-кейсы, threat model.
+          </div>
+        <div class="project-tech">
+          <span class="project-tech-tag">Python</span>
+          <span class="project-tech-tag">FastAPI</span>
+          <span class="project-tech-tag">PostgreSQL</span>
+          <span class="project-tech-tag">Docker</span>
+          <span class="project-tech-tag">GitHub Actions</span>
+            <span class="project-tech-tag">Trivy</span>
+            <span class="project-tech-tag">OWASP ZAP</span>
+        </div>
+      </a>
+    <div class="project-showcase reveal" data-tags="python,docker,ci/cd">
       <div class="showcase-header">
         <div>
           <div class="project-name">ByteDepp Control Panel</div>
-          <div class="project-type">Full-stack Web App</div>
+          <div class="project-type">Full-stack Web App · <span data-i18n="p1-private">приватный репозиторий, демо по запросу</span></div>
           <div class="project-desc" data-i18n="p1-desc">
             Панель управления автомобилями ByteDepp: привязка VIN к устройствам, клиентский кабинет с записью на сервис, админка с журналом, CSRF-защита, SQLite, Docker, CI/CD.
           </div>
@@ -990,7 +1023,7 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
           <div class="screenshot-label" data-i18n="ss-admin">Админ-панель</div>
         </div>
       </div>
-    </a>
+    </div>
     <div class="project-showcase reveal" style="margin-bottom:16px" data-tags="beszel,grafana,prometheus,loki,alloy,alertmanager,docker">
       <div class="showcase-header">
         <div>
@@ -1030,20 +1063,6 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
           <span class="project-tech-tag">Ubuntu</span>
         </div>
       </div>
-      <a class="project-card reveal reveal-delay-1" href="https://github.com/Georgiy-DevOps/aegis-arena" target="_blank" rel="noopener" data-tags="python,docker">
-        <div class="project-name">Aegis Arena</div>
-        <div class="project-type">GameDevSecOps / Backend</div>
-        <div class="project-desc" data-i18n="p3-desc">
-          Безопасный мультиплеерный game-бэкенд: JWT-авторизация, серверная валидация скоров, анти-чит, PostgreSQL, Redis, CI через GitHub Actions.
-        </div>
-        <div class="project-tech">
-          <span class="project-tech-tag">Python</span>
-          <span class="project-tech-tag">FastAPI</span>
-          <span class="project-tech-tag">PostgreSQL</span>
-          <span class="project-tech-tag">Docker</span>
-          <span class="project-tech-tag">Pytest</span>
-        </div>
-      </a>
       <div class="project-card reveal reveal-delay-2" data-tags="c#,unity,hdrp">
         <div class="project-name">Depth-7: Evacuation</div>
         <div class="project-type" data-i18n="p4-type">Дипломный проект / Unity HDRP</div>
@@ -1131,31 +1150,31 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
     <div class="cta-list">
       <div class="cta-item">
         <span class="cta-marker">&#8594;</span>
-        <span data-i18n="cta-1">Поднять продакшн-сервер с нуля — от железа до работающего сервиса за день</span>
+        <span data-i18n="cta-1">Встроить security-проверки в CI/CD: SAST, SCA, сканирование образов и DAST с понятным quality gate</span>
       </div>
       <div class="cta-item">
         <span class="cta-marker">&#8594;</span>
-        <span data-i18n="cta-2">Собрать полный стек мониторинга, чтобы вы узнавали о проблемах раньше пользователей</span>
+        <span data-i18n="cta-2">Захарденить Linux-серверы и контейнеры: SSH, изоляция systemd-сервисов, фаервол, аудит</span>
       </div>
       <div class="cta-item">
         <span class="cta-marker">&#8594;</span>
-        <span data-i18n="cta-3">Провести аудит безопасности и закрыть дыры до того, как их найдут другие</span>
+        <span data-i18n="cta-3">Настроить мониторинг и алерты, чтобы о проблемах узнавать раньше пользователей</span>
       </div>
       <div class="cta-item">
         <span class="cta-marker">&#8594;</span>
-        <span data-i18n="cta-4">Автоматизировать деплой: один git push — и код на продакшне через секунды</span>
+        <span data-i18n="cta-4">Выстроить бэкапы, которые реально восстанавливаются, — с регулярной автоматической проверкой</span>
       </div>
       <div class="cta-item">
         <span class="cta-marker">&#8594;</span>
-        <span data-i18n="cta-5">Убрать ручную рутину скриптами — то, что делалось час, будет делаться за минуту</span>
+        <span data-i18n="cta-5">Разобрать инцидент по логам и оформить postmortem и runbook</span>
       </div>
       <div class="cta-item">
         <span class="cta-marker">&#8594;</span>
-        <span data-i18n="cta-6">Настроить удалённый доступ к embedded-устройствам через защищённые туннели</span>
+        <span data-i18n="cta-6">Автоматизировать рутину на Python, Bash и Go</span>
       </div>
       <div class="cta-item">
         <span class="cta-marker">&#8594;</span>
-        <span data-i18n="cta-7">Контейнеризировать приложение в Docker, чтобы «у меня работает» стало «работает везде»</span>
+        <span data-i18n="cta-7">Настроить защищённый удалённый доступ к embedded-устройствам через SSH-туннели</span>
       </div>
     </div>
   </section>
@@ -1168,328 +1187,6 @@ a.contact-item:hover, .contact-item:hover { color: var(--accent); }
 
 </div>
 
-<script>
-(function(){
-  var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  /* Scroll reveal */
-  if (!reducedMotion) {
-    var obs = new IntersectionObserver(function(entries) {
-      entries.forEach(function(e) {
-        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.reveal').forEach(function(el) { obs.observe(el); });
-
-    /* Typewriter effect on hero subtitle */
-    var heroSub = document.querySelector('.hero-sub');
-    if (heroSub) {
-      var fullText = heroSub.textContent;
-      heroSub.textContent = '';
-      var cursor = document.createElement('span');
-      cursor.className = 'typewriter-cursor';
-      heroSub.appendChild(cursor);
-      var twObs = new IntersectionObserver(function(entries) {
-        if (entries[0].isIntersecting) {
-          twObs.unobserve(heroSub);
-          var i = 0;
-          function typeNext() {
-            if (i < fullText.length) {
-              heroSub.insertBefore(document.createTextNode(fullText[i]), cursor);
-              i++;
-              setTimeout(typeNext, 40 + Math.random() * 30);
-            } else {
-              setTimeout(function() { cursor.style.display = 'none'; }, 2000);
-            }
-          }
-          typeNext();
-        }
-      }, { threshold: 0.5 });
-      twObs.observe(heroSub);
-    }
-
-    /* Timeline dot pulse */
-    var dotObs = new IntersectionObserver(function(entries) {
-      entries.forEach(function(e) {
-        if (e.isIntersecting) {
-          var dot = e.target.querySelector('.timeline-dot');
-          if (dot) dot.classList.add('pulse');
-          dotObs.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.3 });
-    document.querySelectorAll('.timeline-item').forEach(function(el) { dotObs.observe(el); });
-  }
-
-  /* Animated number counters */
-  var counterObs = new IntersectionObserver(function(entries) {
-    entries.forEach(function(e) {
-      if (!e.isIntersecting) return;
-      var el = e.target;
-      var raw = el.getAttribute('data-target');
-      var prefix = raw.match(/^[^0-9]*/)[0] || '';
-      var suffix = raw.match(/[^0-9]*$/)[0] || '';
-      var num = parseFloat(raw.replace(/[^0-9.]/g, ''));
-      if (isNaN(num)) { el.textContent = raw; counterObs.unobserve(el); return; }
-      var isFloat = raw.indexOf('.') !== -1;
-      var duration = 1200;
-      var start = performance.now();
-      function tick(now) {
-        var progress = Math.min((now - start) / duration, 1);
-        var ease = 1 - Math.pow(1 - progress, 3);
-        var current = ease * num;
-        el.textContent = prefix + (isFloat ? current.toFixed(1) : Math.round(current)) + suffix;
-        if (progress < 1) requestAnimationFrame(tick);
-      }
-      requestAnimationFrame(tick);
-      counterObs.unobserve(el);
-    });
-  }, { threshold: 0.5 });
-  document.querySelectorAll('.achievement-num[data-target]').forEach(function(el) {
-    el.textContent = '0';
-    counterObs.observe(el);
-  });
-
-  /* Clickable skill tags → highlight matching experience & projects */
-  var hint = document.getElementById('stackHint');
-  var hintText = { ru: 'Нажми на навык — покажу где он используется ↓', en: 'Click a skill to see where it’s used ↓' };
-  var hintFound = { ru: 'Найдено: ', en: 'Found: ' };
-  var hintReset = { ru: ' — кликни ещё раз чтобы сбросить', en: ' — click again to reset' };
-  var hintNone = { ru: 'Не найдено совпадений', en: 'No matches found' };
-  function getL() { return currentLang || 'ru'; }
-  if (hint) hint.textContent = hintText[getL()];
-  var activeTag = null;
-  var targets = document.querySelectorAll('.timeline-item[data-tags], .project-showcase[data-tags], .project-card[data-tags]');
-  document.querySelectorAll('.skill-tag').forEach(function(tag) {
-    tag.addEventListener('click', function() {
-      var name = tag.textContent.trim().toLowerCase();
-      if (activeTag === tag) {
-        tag.classList.remove('active-tag');
-        activeTag = null;
-        targets.forEach(function(t) { t.classList.remove('highlight', 'dimmed-item'); });
-        if (hint) hint.textContent = hintText[getL()];
-        return;
-      }
-      if (activeTag) activeTag.classList.remove('active-tag');
-      tag.classList.add('active-tag');
-      activeTag = tag;
-      var found = 0;
-      targets.forEach(function(t) {
-        var tags = (t.getAttribute('data-tags') || '').split(',');
-        var match = tags.some(function(x) { return x.trim() === name; });
-        t.classList.toggle('highlight', match);
-        t.classList.toggle('dimmed-item', !match);
-        if (match) found++;
-      });
-      if (hint) hint.textContent = found ? hintFound[getL()] + found + hintReset[getL()] : hintNone[getL()];
-      var first = document.querySelector('.timeline-item.highlight, .project-showcase.highlight, .project-card.highlight');
-      if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    });
-  });
-
-  /* Scroll progress bar */
-  var prog = document.getElementById('scrollProgress');
-  window.addEventListener('scroll', function() {
-    var h = document.documentElement.scrollHeight - window.innerHeight;
-    if (h > 0) prog.style.width = (window.scrollY / h * 100) + '%';
-  }, { passive: true });
-
-  /* Anchor nav: show after hero, highlight active section */
-  var anchorNav = document.getElementById('anchorNav');
-  var sections = document.querySelectorAll('.section[id]');
-  var anchorLinks = document.querySelectorAll('.anchor-link');
-  var heroEl = document.querySelector('.hero');
-
-  function updateNav() {
-    var scrollY = window.scrollY;
-    var heroBottom = heroEl ? heroEl.offsetTop + heroEl.offsetHeight : 400;
-    if (scrollY > heroBottom - 200) {
-      anchorNav.classList.add('visible');
-    } else {
-      anchorNav.classList.remove('visible');
-    }
-    var current = '';
-    sections.forEach(function(s) {
-      if (scrollY >= s.offsetTop - 200) current = s.id;
-    });
-    anchorLinks.forEach(function(a) {
-      if (a.getAttribute('href') === '#' + current) {
-        a.classList.add('active');
-      } else {
-        a.classList.remove('active');
-      }
-    });
-  }
-  window.addEventListener('scroll', updateNav, { passive: true });
-  updateNav();
-
-  /* Theme toggle */
-  var btn = document.getElementById('themeToggle');
-  var icon = document.getElementById('themeIcon');
-  function getEffective() {
-    var dt = document.documentElement.getAttribute('data-theme');
-    if (dt) return dt;
-    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-  }
-  function updateIcon() {
-    icon.innerHTML = getEffective() === 'dark' ? '&#9788;' : '&#9790;';
-  }
-  updateIcon();
-  btn.addEventListener('click', function() {
-    var next = getEffective() === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', next);
-    try { localStorage.setItem('theme', next); } catch(e) {}
-    updateIcon();
-  });
-  try {
-    var saved = localStorage.getItem('theme');
-    if (saved === 'light' || saved === 'dark') {
-      document.documentElement.setAttribute('data-theme', saved);
-      updateIcon();
-    }
-  } catch(e) {}
-
-  /* Print / PDF button */
-  document.getElementById('printBtn').addEventListener('click', function() {
-    window.print();
-  });
-
-  /* Language toggle RU/EN */
-  var i18n = {
-    en: {
-      'hero-eyebrow': 'DevOps Engineer / Moscow',
-      'hero-name': 'Georgiy',
-      'pillar-1': 'Infrastructure',
-      'pillar-2': 'Security',
-      'pillar-3': 'Monitoring',
-      'hero-sub': 'Servers run. Data is safe. Production under control.',
-      'c-phone': 'Phone',
-      'copied': 'Copied',
-      's-about': 'About',
-      's-stack': 'Stack',
-      's-exp': 'Experience',
-      's-ach': 'Achievements',
-      's-proj': 'Projects',
-      's-edu': 'Education',
-      's-lang': 'Languages',
-      's-cta': 'How I can help',
-      'a1': 'Production servers managed',
-      'a2': 'Monitoring services in the stack',
-      'a3': 'Critical incidents after security setup',
-      'a4': 'C# scripts in Unity HDRP thesis project',
-      't1-date': 'September 2026 — present',
-      't2-date': 'October 2026 — present',
-      'ss-client': 'Customer Portal',
-      'ss-admin': 'Admin Dashboard',
-      'ss-beszel': 'Beszel — server 130-ByteDepp monitoring',
-      't2-role': 'Systems Engineer',
-      'p1-desc': 'ByteDepp vehicle management panel: VIN-to-device binding, customer portal with service booking, admin dashboard with logs, CSRF protection, SQLite, Docker, CI/CD.',
-      'p2-desc': 'Full observability stack for 3 production servers: metrics, logs, Telegram alerts. Beszel as lightweight monitoring hub, Grafana + Prometheus for deep analytics, Loki + Alloy for centralized logs, Alertmanager for notifications.',
-      'p3-desc': 'Secure multiplayer game backend: JWT auth, server-side score validation, anti-cheat, PostgreSQL, Redis, CI via GitHub Actions.',
-      'p4-type': 'Thesis Project / Unity HDRP',
-      'p4-desc': '3D first-person survival game. Quest system, object interaction, day/night cycle, FPS controller on Input System, lightmapping, procedural forest.',
-      'p5-desc': 'SIM configuration patching for Zeekr 9X and Lynk&Co 900 telematics modules for Russian carriers. RIL patching, APN, backup/restore.',
-      'p6-desc': 'Telegram bot for daily planning with web interface. Schedule, tasks, reminders.',
-      'p7-desc': 'Deployed Frappe CRM on a dedicated server: installed and configured MariaDB, Redis, Nginx, bench CLI. Full cycle from environment setup to production launch.',
-      'edu-name': 'Moscow Polytechnic University',
-      'edu-fac': 'Software Engineering for Game Industry',
-      'lang-ru': 'Native',
-      'cta-1': 'Spin up a production server from scratch — bare metal to running service in a day',
-      'cta-2': 'Build a full monitoring stack so you know about problems before your users do',
-      'cta-3': 'Run a security audit and close the gaps before someone else finds them',
-      'cta-4': 'Automate deployments: one git push and your code is live in seconds',
-      'cta-5': 'Eliminate manual busywork with scripts — what took an hour now takes a minute',
-      'cta-6': 'Set up secure remote access to embedded devices via encrypted tunnels',
-      'cta-7': 'Containerize your app with Docker so "works on my machine" becomes "works everywhere"',
-      'footer-loc': 'Moscow, 2026',
-      'footer-status': 'Open to opportunities',
-      'stack-hint': 'Click a skill to see where it’s used ↓'
-    },
-    ru: {
-      'hero-eyebrow': 'DevOps Engineer / Москва',
-      'hero-name': 'Георгий',
-      'pillar-1': 'Инфраструктура',
-      'pillar-2': 'Безопасность',
-      'pillar-3': 'Мониторинг',
-      'hero-sub': 'Серверы работают. Данные в безопасности. Продакшн под контролем.',
-      'c-phone': 'Телефон',
-      'copied': 'Скопировано',
-      's-about': 'О себе',
-      's-stack': 'Стек',
-      's-exp': 'Опыт',
-      's-ach': 'Достижения',
-      's-proj': 'Проекты',
-      's-edu': 'Образование',
-      's-lang': 'Языки',
-      's-cta': 'Чем могу быть полезен',
-      'stack-hint': 'Нажми на навык — покажу где он используется ↓'
-    }
-  };
-  var i18nHtml = {
-    en: {
-      'about-text': 'DevOps engineer with hands-on experience in <strong>server infrastructure</strong>, monitoring, and information security. Independently built a production environment across three servers with a full observability stack. Working with <strong>automotive embedded systems</strong> — Qualcomm head units, MediaTek telematics, diagnostics via ADB. 4th-year student at Moscow Polytechnic University (game industry software engineering). Looking for a role with ambitious challenges that directly impact <strong>product and business</strong>.',
-      't1-desc': '<ul><li>Administration of 3 production Ubuntu/Debian servers — uptime 99.8%, avg incident response &lt; 30 min</li><li>Deployed monitoring stack of 6 services (Grafana, Prometheus, Loki, Alloy, Alertmanager, Beszel) — 100% alert coverage</li><li>Server security: fail2ban, iptables, UFW, SSH hardening — 0 breaches, 500+ brute-force attempts blocked/month</li><li>Diagnosed and resolved OOM on monitoring server (4 GB RAM) — 40% memory reduction via container limits and swap</li><li>Set up restic backups to offsite server (750 GB), automated daily backups — RPO &lt; 24h</li><li>Built TCAM SIM Patch Tool — telematics patching for Zeekr 9X / Lynk&Co, reduced operation time from 2h to 15 min</li></ul>',
-      't2-desc': '<ul><li>Zeekr diagnostic equipment — ZDS, VBF, security certificate configuration for 10+ vehicles</li><li>ADB access to SA8295 head units (Android 12) — localization and configuration, 20+ devices serviced</li><li>Deployed Frappe CRM on a dedicated server — configured MariaDB, Redis, Nginx, full cycle from installation to production</li><li>Developed SSH tunnels for remote access to vehicle systems — diagnostics time reduced 3x</li></ul>'
-    },
-    ru: {
-      'about-text': 'DevOps-инженер с практическим опытом в <strong>серверной инфраструктуре</strong>, мониторинге и информационной безопасности. Самостоятельно выстроил продакшн-окружение из трёх серверов с полным стеком наблюдаемости. Работаю с <strong>автомобильными embedded-системами</strong> — головные устройства Qualcomm, телематика MediaTek, диагностика через ADB. Студент 4-го курса Московского Политеха (программное обеспечение игровой индустрии). Ищу позицию с амбициозными задачами, которые напрямую влияют на <strong>продукт и бизнес</strong>.',
-      't1-desc': '<ul><li>Администрирование 3 продакшн-серверов Ubuntu/Debian — uptime 99.8%, среднее время реакции на инцидент &lt; 30 мин</li><li>Развёртывание стека мониторинга из 6 сервисов (Grafana, Prometheus, Loki, Alloy, Alertmanager, Beszel) — покрытие алертами 100% серверов</li><li>Защита серверов: fail2ban, iptables, UFW, SSH hardening — 0 успешных взломов, заблокировано 500+ брутфорс-попыток/мес</li><li>Диагностика и устранение OOM на сервере мониторинга (4 ГБ RAM) — снижение потребления памяти на 40% через лимиты контейнеров и swap</li><li>Настройка restic-бэкапов на офсайт-сервер (750 ГБ), автоматизация ежедневного бэкапа — RPO &lt; 24ч</li><li>Создание TCAM SIM Patch Tool — патчинг телематики Zeekr 9X / Lynk&Co, сокращение времени операции с 2ч до 15 мин</li></ul>',
-      't2-desc': '<ul><li>Диагностическое оборудование Zeekr — настройка ЗДС, VBF, сертификатов безопасности для 10+ автомобилей</li><li>ADB-доступ к головным устройствам SA8295 (Android 12) — русификация и конфигурация, обслужено 20+ устройств</li><li>Развёртывание Frappe CRM на выделенном сервере — настройка MariaDB, Redis, Nginx, полный цикл от установки до продакшна</li><li>Разработка SSH-туннелей для удалённого доступа к автомобильным системам — время диагностики сокращено в 3 раза</li></ul>'
-    }
-  };
-  var currentLang = 'ru';
-  var langLabel = document.getElementById('langLabel');
-  var langBtn = document.getElementById('langToggle');
-
-  function applyLang(lang) {
-    currentLang = lang;
-    document.querySelectorAll('[data-i18n]').forEach(function(el) {
-      var key = el.getAttribute('data-i18n');
-      if (i18n[lang] && i18n[lang][key]) el.textContent = i18n[lang][key];
-    });
-    document.querySelectorAll('[data-i18n-html]').forEach(function(el) {
-      var key = el.getAttribute('data-i18n-html');
-      if (i18nHtml[lang] && i18nHtml[lang][key]) el.innerHTML = i18nHtml[lang][key];
-    });
-    langLabel.textContent = lang === 'ru' ? 'EN' : 'RU';
-    document.documentElement.setAttribute('lang', lang);
-    try { localStorage.setItem('lang', lang); } catch(e) {}
-  }
-
-  langBtn.addEventListener('click', function() {
-    applyLang(currentLang === 'ru' ? 'en' : 'ru');
-  });
-
-  try {
-    var savedLang = localStorage.getItem('lang');
-    if (savedLang === 'en') applyLang('en');
-  } catch(e) {}
-
-  /* Click-to-copy contacts */
-  document.querySelectorAll('[data-copy]').forEach(function(el) {
-    el.addEventListener('click', function() {
-      var val = el.getAttribute('data-copy');
-      var toast = el.querySelector('.copy-toast');
-      try {
-        navigator.clipboard.writeText(val).then(function() {
-          if (toast) { toast.classList.add('show'); setTimeout(function(){ toast.classList.remove('show'); }, 1500); }
-        }).catch(function() {
-          fallbackSelect(el);
-        });
-      } catch(e) {
-        fallbackSelect(el);
-      }
-    });
-    el.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
-    });
-  });
-  function fallbackSelect(el) {
-    var range = document.createRange();
-    range.selectNodeContents(el);
-    var sel = window.getSelection();
-    sel.removeAllRanges();
-    sel.addRange(range);
-  }
-})();
-</script>
+<script src="app.js" defer></script>
+</body>
+</html>
