@@ -919,28 +919,14 @@ DevOps-инженер с фокусом на <strong>безопасность и
       <span class="section-line"></span>
     </div>
     <div class="timeline">
-      <div class="timeline-item reveal" data-tags="linux,docker,docker compose,systemd,nginx,git,ci/cd,grafana,prometheus,loki,alloy,alertmanager,beszel,fail2ban,iptables,ufw,ssh hardening,nftables,auditd,systemd sandboxing,restic,bash,python,tcam">
+      <div class="timeline-item reveal" data-tags="linux,docker,docker compose,systemd,nginx,git,ci/cd,grafana,prometheus,loki,alloy,alertmanager,beszel,fail2ban,iptables,ufw,ssh hardening,nftables,auditd,systemd sandboxing,restic,bash,python,tcam,adb,android,ssh tunneling">
         <div class="timeline-dot"></div>
         <div class="timeline-date" data-i18n="t1-date">Сентябрь 2026 — настоящее время</div>
-        <div class="timeline-role">DevOps Engineer</div>
-        <div class="timeline-company">ByteDeppSoft</div>
+        <div class="timeline-role" data-i18n="t1-role">DevOps / системный инженер</div>
+        <div class="timeline-company">ByteDeppSoft · Zeecar</div>
         <div class="timeline-desc" data-i18n-html="t1-desc">
-<ul><li>Сопровождение 3 продакшн-серверов Ubuntu/Debian: обновления ядра, разбор инцидентов по журналам (RCA зависания сервера при перезагрузке)</li><li>Стек мониторинга из 6 сервисов (Grafana, Prometheus, Loki, Alloy, Alertmanager, Beszel) с алертами в Telegram</li><li>Hardening: SSH только по ключам, fail2ban с эскалацией банов через nftables, изоляция systemd-сервисов, auditd на изменения SSH/sudo/фаервола, unattended-upgrades</li><li>Telegram-алерты на каждый успешный root-вход по SSH: IP источника, метод аутентификации, отпечаток ключа</li><li>Зашифрованные ежедневные бэкапы restic на офсайт-сервер с автоматической проверкой восстановления SQLite-баз (integrity_check, сверка SHA-256)</li><li>Устранение OOM на сервере мониторинга (4 ГБ RAM): лимиты контейнеров и swap, потребление памяти снижено на 40%</li><li>TCAM SIM Patch Tool: патчинг телематики Zeekr 9X / Lynk&amp;Co, операция сократилась с 2 ч до 15 мин</li></ul>
+<ul><li>Сопровождение 3 продакшн-серверов Ubuntu/Debian: обновления ядра, разбор инцидентов по журналам (RCA зависания сервера при перезагрузке)</li><li>Стек мониторинга из 6 сервисов (Grafana, Prometheus, Loki, Alloy, Alertmanager, Beszel) с алертами в Telegram</li><li>Hardening: SSH только по ключам, fail2ban с эскалацией банов через nftables, изоляция systemd-сервисов, auditd на изменения SSH/sudo/фаервола, unattended-upgrades</li><li>Telegram-алерты на каждый успешный root-вход по SSH: IP источника, метод аутентификации, отпечаток ключа</li><li>Зашифрованные ежедневные бэкапы restic на офсайт-сервер с автоматической проверкой восстановления SQLite-баз (integrity_check, сверка SHA-256)</li><li>Устранение OOM на сервере мониторинга (4 ГБ RAM): лимиты контейнеров и swap, потребление памяти снижено на 40%</li><li>TCAM SIM Patch Tool: патчинг телематики Zeekr 9X / Lynk&amp;Co, операция сократилась с 2 ч до 15 мин</li><li>Автомобильные системы Zeekr: настройка ЗДС, VBF и сертификатов безопасности для 10+ автомобилей, ADB-доступ к головным устройствам SA8295 (Android 12), обслужено 20+ устройств</li><li>SSH-туннели для удалённой диагностики автомобильных систем без выезда к машине</li><li>Развёртывание Frappe CRM на выделенном сервере: MariaDB, Redis, Nginx, от установки до продакшна</li></ul>
 </div>
-      </div>
-      <div class="timeline-item reveal" data-tags="adb,android,ssh tunneling,bash,python">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date" data-i18n="t2-date">Октябрь 2026 — настоящее время</div>
-        <div class="timeline-role" data-i18n="t2-role">Системный инженер</div>
-        <div class="timeline-company">Zeecar</div>
-        <div class="timeline-desc" data-i18n-html="t2-desc">
-          <ul>
-            <li>Диагностическое оборудование Zeekr — настройка ЗДС, VBF, сертификатов безопасности для 10+ автомобилей</li>
-            <li>ADB-доступ к головным устройствам SA8295 (Android 12) — русификация и конфигурация, обслужено 20+ устройств</li>
-            <li>Развёртывание Frappe CRM на выделенном сервере — настройка MariaDB, Redis, Nginx, полный цикл от установки до продакшна</li>
-            <li>SSH-туннели для удалённой диагностики автомобильных систем без выезда к машине</li>
-          </ul>
-        </div>
       </div>
     </div>
   </section>
@@ -1079,7 +1065,7 @@ DevOps-инженер с фокусом на <strong>безопасность и
       </div>
       <div class="project-card reveal reveal-delay-3" data-tags="adb,android,bash,tcam">
         <div class="project-name">TCAM SIM Patch Tool</div>
-        <div class="project-type">Open Source</div>
+        <div class="project-type" data-i18n="p5-type">Внутренний инструмент · код по запросу</div>
         <div class="project-desc" data-i18n="p5-desc">
           Патчинг SIM-конфигурации телематических модулей Zeekr 9X и Lynk&Co 900 для российских операторов.
           RIL-патчинг, APN, backup/restore.
